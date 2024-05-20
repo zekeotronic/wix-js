@@ -33,8 +33,8 @@ class WixEvents {
    * @param {object} query Query parameters
    * @returns {Promise<object[]>} List of events
    */
-  async queryEvents(queryObject = this.DEFAULTS.queryEvents) {
-    let data = JSON.stringify(queryObject);
+  async queryEvents(queryObject = {}) {
+    let data = JSON.stringify({...this.DEFAULTS.queryEvents, queryObject});
     let config = {
       method: 'post',
       maxBodyLength: Infinity,
