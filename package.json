@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/zekeotronic/wix-js/issues"
   },
-  "homepage": "https://github.com/zekeotronic/wix-js#readme"
+  "homepage": "https://github.com/zekeotronic/wix-js#readme",
+  "dependencies": {
+    "axios": "^1.7.1"
+  }
 }
