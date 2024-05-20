@@ -5,5 +5,5 @@ This library provides a simple way to handle events in a Wix site using the Wix 
 ## Installation
 
 ```bash
-npm i @wix-events-js
+npm i wix-events-js
 ```
