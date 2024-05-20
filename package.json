@@ -1,0 +1,22 @@
+{
+  "name": "wix-events-js",
+  "version": "1.0.0",
+  "description": "Wrapper for Wix REST API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zekeotronic/wix-js.git"
+  },
+  "keywords": [
+    "wix"
+  ],
+  "author": "Eric Ihle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zekeotronic/wix-js/issues"
+  },
+  "homepage": "https://github.com/zekeotronic/wix-js#readme"
+}
