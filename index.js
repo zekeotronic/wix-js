@@ -27,14 +27,13 @@ class WixEvents {
       }
     }
   }
-
   /**
    * Query events
    * @param {object} query Query parameters
    * @returns {Promise<object[]>} List of events
    */
-  async queryEvents(queryObject = {}) {
-    let data = JSON.stringify({...this.DEFAULTS.queryEvents, queryObject});
+  async queryEvents(queryObject = this.DEFAULTS.queryEvents) {
+    let data = JSON.stringify(queryObject);xz
     let config = {
       method: 'post',
       maxBodyLength: Infinity,
@@ -46,6 +45,29 @@ class WixEvents {
       },
       data: data
     };
+    try {
+      let response = await axios.request(config);
+      return response;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  /**
+   * Get event by ID
+   * @param {string} eventId Event ID
+   * @returns {Promise<object>} Event object
+  */
+  async getEvent(eventId) {
+    let config = {
+      method: 'get',
+      maxBodyLength: Infinity,
+      url: `https://www.wixapis.com/events/v3/events/${eventId}`,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `${this.apiKey}`,
+        'wix-site-id': `${this.siteId}`
+      }
+    }
     try {
       let response = await axios.request(config);
       return response;
